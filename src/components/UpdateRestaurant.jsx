@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import RestaurantFinder from "../apis/RestaurantFinder";
+import Header from "./Header";
 // import { RestaurantsContext } from "../context/RestaurantsContext";
 
 const UpdateRestaurant = (props) => {
@@ -35,6 +36,7 @@ const UpdateRestaurant = (props) => {
   };
   return (
     <div className="container">
+      <Header/>
       <form action="">
         <div className="row">
           <div className="mb-4">

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import RestaurantFinder from "../apis/RestaurantFinder";
-import { useNavigate, useParams, useLocation } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 const AddReview = () => {
   const { id } = useParams();
   let navigate = useNavigate();
-  const location = useLocation();
   const [name, setName] = useState("");
   const [reviewText, setReviewText] = useState("");
   const [rating, setRating] = useState("Rating");
@@ -17,7 +16,6 @@ const AddReview = () => {
         rating,
       });
       navigate("/");
-      navigate(location.pathname);
     } catch (err) {}
   };
   return (
